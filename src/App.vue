@@ -1,30 +1,13 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <!-- 현재 경로에 맞는 컴포넌트를 보여주는 자리 -->
+  <router-view />
 </template>
 
+<script setup>
+// App.vue에서는 아무 컴포넌트도 직접 import하지 않습니다.
+// '/'와 '/ci3' 각각은 router/index.js에서 연결합니다.
+</script>
+
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+/* 공통 스타일이 필요하다면 여기에 작성 */
 </style>
