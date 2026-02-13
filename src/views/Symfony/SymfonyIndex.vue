@@ -56,26 +56,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { useModuleIndex } from 'src/services/moduleIndex.js'
 
-const otherRoutes = ref([])
-const apiRoutes = ref([])
-const csrRoutes = ref([])
-
-onMounted(async () => {
-  const res = await fetch('https://localhost:9204/routes') // Symfony REST API 호출
-  const data = await res.json()
-
-  data.forEach(r => {
-    if (r.uri.startsWith('api/')) apiRoutes.value.push(r)
-    else if (r.uri.startsWith('csr/')) csrRoutes.value.push(r)
-    else if (r.uri.startsWith('ssr/')) {
-      // SSR 라우트는 필요시 별도 처리
-    }
-    else otherRoutes.value.push(r)
-  })
-})
+const { otherRoutes, apiRoutes, csrRoutes } = useModuleIndex(9204) // Symfony
 </script>
+
 
 <style>
 th.method-col, td.method-col { width: 10%; }

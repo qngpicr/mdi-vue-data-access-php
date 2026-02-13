@@ -37,22 +37,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { useModuleCpuTotal } from 'src/services/moduleCpuTotal.js'
 
-const cpus = ref([])
-const loading = ref(true)
-
-onMounted(async () => {
-  try {
-    const res = await fetch('https://localhost:9201/api/cpus')
-    cpus.value = await res.json()
-  } catch (err) {
-    console.error('API 호출 오류:', err)
-  } finally {
-    loading.value = false
-  }
-})
+const { cpus, loading } = useModuleCpuTotal(9201) // CI3
 </script>
+
 
 <style>
 .table {

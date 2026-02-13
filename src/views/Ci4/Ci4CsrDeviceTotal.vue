@@ -35,22 +35,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { useModuleDeviceTotal } from 'src/services/moduleDeviceTotal.js'
 
-const devices = ref([])
-const loading = ref(true)
-
-onMounted(async () => {
-  try {
-    const res = await fetch('https://localhost:9202/api/devices')
-    devices.value = await res.json()
-  } catch (err) {
-    console.error('API 호출 오류:', err)
-  } finally {
-    loading.value = false
-  }
-})
+const { devices, loading } = useModuleDeviceTotal(9202) // CI4
 </script>
+
 
 <style>
 .table {

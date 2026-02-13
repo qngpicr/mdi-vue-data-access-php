@@ -45,22 +45,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { useModuleMemberTotal } from 'src/services/moduleMemberTotal.js'
 
-const members = ref([])
-const loading = ref(true)
-
-onMounted(async () => {
-  try {
-    const res = await fetch('https://localhost:9202/api/members')
-    members.value = await res.json()
-  } catch (err) {
-    console.error('API 호출 오류:', err)
-  } finally {
-    loading.value = false
-  }
-})
+const { members, loading } = useModuleMemberTotal(9202) // CI4
 </script>
+
 
 <style>
 .table {

@@ -1,3 +1,5 @@
+// src/router/index.js
+
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
@@ -22,7 +24,7 @@ import SymfonyCsrDeviceTotal from '../views/Symfony/SymfonyCsrDeviceTotal.vue'
 import SymfonyCsrMemberTotal from '../views/Symfony/SymfonyCsrMemberTotal.vue'
 
 const routes = [
-  { path: '/', component: HomeView },   // 기본 웰컴 화면
+  { path: '/', component: HomeView },
 
   { path: '/ci3', component: Ci3Index },
   { path: '/ci3/csr/cpus', component: Ci3CsrCpuTotal },
