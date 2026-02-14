@@ -2,22 +2,22 @@
   <div class="container mt-4">
     <h2 style="margin-top:20px">RouteInfoController(CI3)</h2>
 
-    <!-- 기타 라우트 -->
-    <table class="table table-bordered table-sm table-hover">
-      <thead class="table-light">
-        <tr><th class="method-col">HTTP Method</th><th class="uri-col">URI</th></tr>
-      </thead>
-      <tbody>
-        <tr v-for="r in otherRoutes" :key="r.uri + r.method">
-          <td>{{ r.method }}</td>
-          <td>
-            <router-link :to="`/ci3/${r.uri}`">
+  <!-- 기타 라우트 -->
+  <table class="table table-bordered table-sm table-hover">
+    <thead class="table-light">
+      <tr><th class="method-col">HTTP Method</th><th class="uri-col">URI</th></tr>
+    </thead>
+    <tbody>
+      <tr v-for="r in otherRoutes" :key="r.uri + r.method">
+        <td>{{ r.method }}</td>
+        <td>
+          <a :href="`https://localhost:9201/${r.uri}`">
               /ci3/{{ r.uri }}
-            </router-link>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
     <!-- API 라우트 -->
     <table class="table table-bordered table-sm table-hover">
@@ -28,8 +28,7 @@
         <tr v-for="r in apiRoutes" :key="r.uri + r.method">
           <td>{{ r.method }}</td>
           <td>
-            <!-- API는 외부 호출이므로 router-link 대신 a 태그 유지 -->
-            <a :href="`https://localhost:9201/${r.uri}`" target="_blank">
+            <a :href="`https://localhost:9201/${r.uri}`">
               /ci3/{{ r.uri }}
             </a>
           </td>
