@@ -39,6 +39,6 @@
 <script setup>
 import { useModuleCpuTotal } from 'src/services/moduleCpuTotal.js'
 
-const { cpus, loading } = useModuleCpuTotal(9202) // CI4
+const { cpus, loading } = useModuleCpuTotal(9012) // CI4
 </script>
 

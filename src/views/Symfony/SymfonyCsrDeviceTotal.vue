@@ -37,6 +37,6 @@
 <script setup>
 import { useModuleDeviceTotal } from 'src/services/moduleDeviceTotal.js'
 
-const { devices, loading } = useModuleDeviceTotal(9204) // Symfony
+const { devices, loading } = useModuleDeviceTotal(9014) // Symfony
 </script>
 

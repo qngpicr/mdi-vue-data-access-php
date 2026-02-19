@@ -39,6 +39,6 @@
 <script setup>
 import { useModuleCpuTotal } from 'src/services/moduleCpuTotal.js'
 
-const { cpus, loading } = useModuleCpuTotal(9203) // Laravel
+const { cpus, loading } = useModuleCpuTotal(9013) // Laravel
 </script>
 

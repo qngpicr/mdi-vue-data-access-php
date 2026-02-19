@@ -37,7 +37,7 @@
 <script setup>
 import { useModuleDeviceTotal } from 'src/services/moduleDeviceTotal.js'
 
-const { devices, loading } = useModuleDeviceTotal(9201) // CI3
+const { devices, loading } = useModuleDeviceTotal(9011) // CI3
 </script>
 
 

@@ -47,6 +47,6 @@
 <script setup>
 import { useModuleMemberTotal } from 'src/services/moduleMemberTotal.js'
 
-const { members, loading } = useModuleMemberTotal(9204) // Symfony
+const { members, loading } = useModuleMemberTotal(9014) // Symfony
 </script>
 

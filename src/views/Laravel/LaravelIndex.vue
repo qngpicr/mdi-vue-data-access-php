@@ -28,7 +28,7 @@
         <tr v-for="r in apiRoutes" :key="r.uri + r.method">
           <td>{{ r.method }}</td>
           <td>
-            <a :href="`https://localhost:9203/${r.uri}`" target="_blank">
+            <a :href="`https://localhost:9013/${r.uri}`" target="_blank">
               /laravel/{{ r.uri }}
             </a>
           </td>
@@ -58,7 +58,7 @@
 <script setup>
 import { useModuleIndex } from 'src/services/moduleIndex.js'
 
-const { otherRoutes, apiRoutes, csrRoutes } = useModuleIndex(9203) // Laravel
+const { otherRoutes, apiRoutes, csrRoutes } = useModuleIndex(9013) // Laravel
 </script>
 
 

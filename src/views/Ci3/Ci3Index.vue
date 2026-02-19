@@ -11,7 +11,7 @@
       <tr v-for="r in otherRoutes" :key="r.uri + r.method">
         <td>{{ r.method }}</td>
         <td>
-          <a :href="`https://localhost:9201/${r.uri}`">
+          <a :href="`https://localhost:9011/${r.uri}`">
               /ci3/{{ r.uri }}
           </a>
         </td>
@@ -28,7 +28,7 @@
         <tr v-for="r in apiRoutes" :key="r.uri + r.method">
           <td>{{ r.method }}</td>
           <td>
-            <a :href="`https://localhost:9201/${r.uri}`">
+            <a :href="`https://localhost:9011/${r.uri}`">
               /ci3/{{ r.uri }}
             </a>
           </td>
@@ -59,7 +59,7 @@
 <script setup>
 import { useModuleIndex } from 'src/services/moduleIndex.js'
 
-const { otherRoutes, apiRoutes, csrRoutes } = useModuleIndex(9201) // CI3
+const { otherRoutes, apiRoutes, csrRoutes } = useModuleIndex(9011) // CI3
 </script>
 
 

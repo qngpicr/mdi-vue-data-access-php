@@ -39,6 +39,6 @@
 <script setup>
 import { useModuleCpuTotal } from 'src/services/moduleCpuTotal.js'
 
-const { cpus, loading } = useModuleCpuTotal(9204) // Symfony
+const { cpus, loading } = useModuleCpuTotal(9014) // Symfony
 </script>
 

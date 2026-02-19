@@ -47,7 +47,7 @@
 <script setup>
 import { useModuleMemberTotal } from 'src/services/moduleMemberTotal.js'
 
-const { members, loading } = useModuleMemberTotal(9202) // CI4
+const { members, loading } = useModuleMemberTotal(9012) // CI4
 </script>
 
 

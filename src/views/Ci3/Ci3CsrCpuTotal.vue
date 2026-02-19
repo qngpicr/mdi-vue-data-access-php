@@ -39,7 +39,7 @@
 <script setup>
 import { useModuleCpuTotal } from 'src/services/moduleCpuTotal.js'
 
-const { cpus, loading } = useModuleCpuTotal(9201) // CI3
+const { cpus, loading } = useModuleCpuTotal(9011) // CI3
 </script>
 
 

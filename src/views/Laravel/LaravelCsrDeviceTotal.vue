@@ -37,6 +37,6 @@
 <script setup>
 import { useModuleDeviceTotal } from 'src/services/moduleDeviceTotal.js'
 
-const { devices, loading } = useModuleDeviceTotal(9203) // Laravel
+const { devices, loading } = useModuleDeviceTotal(9013) // Laravel
 </script>
 

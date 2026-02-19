@@ -29,7 +29,7 @@
           <td>{{ r.method }}</td>
           <td>
             <!-- API는 외부 호출이므로 router-link 대신 a 태그 유지 -->
-            <a :href="`https://localhost:9202/${r.uri}`" target="_blank">
+            <a :href="`https://localhost:9012/${r.uri}`" target="_blank">
               /ci4/{{ r.uri }}
             </a>
           </td>
@@ -60,7 +60,7 @@
 <script setup>
 import { useModuleIndex } from 'src/services/moduleIndex.js'
 
-const { otherRoutes, apiRoutes, csrRoutes } = useModuleIndex(9202) // CI4
+const { otherRoutes, apiRoutes, csrRoutes } = useModuleIndex(9012) // CI4
 </script>
 
 
